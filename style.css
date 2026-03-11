@@ -1,0 +1,110 @@
+
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: #0f172a;
+    color: #f1f5f9;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    background: #6366f1;
+    padding: 8px 15px;
+    border-radius: 50%;
+}
+
+nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+nav a { color: white; text-decoration: none; font-weight: 600; }
+
+/* Hero */
+.hero { padding: 50px 0; animation: fadeIn 1s ease; }
+.hero-content { display: flex; align-items: center; gap: 40px; }
+
+.hero-image img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+.hero-image img:hover { transform: scale(1.03); }
+
+h1 { font-size: 40px; margin-bottom: 15px; }
+h1 span { color: #a5b4fc; }
+
+.links { margin-top: 20px; display: flex; gap: 15px; }
+.links a { color: #a5b4fc; text-decoration: none; border-bottom: 1px solid; }
+
+/* Projects Grid */
+h2 { margin: 50px 0 20px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.card:hover { transform: translateY(-5px); background: #2d3748; }
+.featured { border-top: 4px solid #6366f1; }
+
+.tags { font-size: 12px; color: #94a3b8; margin: 10px 0 20px; }
+.view-link { color: #a5b4fc; text-decoration: none; font-weight: bold; }
+
+/* Skills & Others */
+.skill-tags span {
+    background: #1e293b;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 0 8px 8px 0;
+}
+
+ul { margin-left: 20px; }
+
+.contact-card {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn {
+    background: #6366f1;
+    padding: 10px 25px;
+    border-radius: 8px;
+    display: inline-block;
+    color: white !important;
+}
+
+/* Essentials */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer { text-align: center; padding: 50px 0; font-size: 12px; color: #64748b; }
+
+/* Mobile */
+@media (max-width: 650px) {
+    .hero-content { flex-direction: column; text-align: center; }
+    h1 { font-size: 30px; }
+}
